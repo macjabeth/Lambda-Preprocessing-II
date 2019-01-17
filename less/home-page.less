@@ -5,16 +5,26 @@
 		text-align: center;
 		border-bottom: 2px dashed #c0c0c0;
 		padding-bottom: 1rem;
+		@media @desktop {
+			padding-bottom: 2rem;
+		}
 
 		> .header-title {
 			font-size: 3rem;
 			margin-bottom: 2rem;
 			width: 100%;
+			@media @desktop {
+				margin-bottom: unset;
+				width: unset;
+			}
 		}
 
 		> .header-nav {
 			width: 80%;
 			.m-flex(space-between);
+			@media @desktop {
+				justify-content: flex-end;
+			}
 		}
 	}
 
@@ -38,17 +48,22 @@
 		margin: 30px 0;
 		display: flex;
 		flex-wrap: wrap;
-		// justify-content: space-between;
+		@media @desktop {
+			padding-bottom: 2rem;
+		}
 
 		.text-content {
-			// width: 48%;
 			padding-right: 1%;
+			@media @desktop {
+				width: 48%;
+			}
 		}
 
 		.img-content {
-			// width: 48%;
 			width: 100%;
-			// padding-left: 1%;
+			@media @desktop {
+				width: 48%;
+			}
 
 			img {
 				width: 100%;
@@ -59,9 +74,9 @@
 
 	.inverse-content {
 		.side-padding;
-
-		// padding-bottom: 30px;
-		// border-bottom: 2px dashed @navigation-border;
+		@media @desktop {
+			border-bottom: 2px dashed #c0c0c0;
+		}
 
 		.text-content {
 			padding-left: 1%;
@@ -74,13 +89,19 @@
 			order: 1;
 			padding-bottom: 30px;
 			border-bottom: 2px dashed #c0c0c0;
+			@media @desktop {
+				order: unset;
+				border-bottom: unset;
+			}
 		}
 	}
 
 	.content-destination {
 		.side-padding;
+		@media @desktop {
+			padding: 0 10rem;
+		}
 
-		// width: 75%;
 		margin: 0 auto 30px;
 
 		img {
@@ -91,14 +112,13 @@
 	.content-pick {
 		.side-padding;
 
-		// padding-top: 30px;
-		// border-top: 2px dashed @navigation-border;
 		display: flex;
 		flex-direction: column;
-		// justify-content: space-between;
+		@media @desktop {
+			flex-direction: unset;
+		}
 
 		.destination {
-			// width: 30%;
 			margin-bottom: 30px;
 			padding: 0 5rem;
 			padding-top: 30px;
@@ -112,6 +132,9 @@
 				text-align: center;
 				font-size: 1.8rem;
 				font-weight: bold;
+				@media @desktop {
+					padding: 1rem 1.5rem;
+				}
 			}
 		}
 	}
