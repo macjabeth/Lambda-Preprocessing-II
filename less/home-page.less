@@ -1,61 +1,104 @@
 .home {
+	> .intro {
+		.side-padding;
+		> figure {
+			width: 100%;
+		}
+		> h2 {
+			margin-top: 3rem;
+		}
+		> p {
+			border-bottom: 2px dashed #c0c0c0;
+			padding-bottom: 3rem;
+		}
+	}
 
-  .content-section {
-    margin: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+	.content-section {
+		.side-padding;
 
-   
-    
-    .text-content {
-      width: 48%;
-      padding-right: 1%;
-    }
+		margin: 30px 0;
+		display: flex;
+		flex-wrap: wrap;
+		@media @desktop {
+			padding-bottom: 2rem;
+		}
 
-    .img-content {
-      width: 48%;
-      padding-left: 1%;
+		.text-content {
+			padding-right: 1%;
+			@media @desktop {
+				width: 48%;
+			}
+		}
 
-      img {
-        border-radius: 10px;
-      }
-    }
-  }
+		.img-content {
+			width: 100%;
+			@media @desktop {
+				width: 48%;
+			}
 
-  .inverse-content {
-    padding-bottom: 30px;
-    border-bottom: 2px dashed @navigation-border;
+			img {
+				width: 100%;
+				border-radius: 10px;
+			}
+		}
+	}
 
-    .text-content {
-      padding-left: 1%;
-      padding-right: 0;
-    }
+	.inverse-content {
+		.side-padding;
+		@media @desktop {
+			border-bottom: 2px dashed #c0c0c0;
+		}
 
-    .img-content {
-      padding-right: 1%;
-      padding-left: 0;
-    }
-  }
+		.text-content {
+			padding-left: 1%;
+			padding-right: 0;
+		}
 
-  .content-destination {
-    width: 75%;
-    margin: 0 auto 30px;
+		.img-content {
+			padding-right: 1%;
+			padding-left: 0;
+			order: 1;
+			padding-bottom: 30px;
+			border-bottom: 2px dashed #c0c0c0;
+			@media @desktop {
+				order: unset;
+				border-bottom: unset;
+			}
+		}
+	}
 
-    img {
-      border-radius: 10px;
-    }
-  }
+	.content-destination {
+		.side-padding;
+		@media @desktop {
+			padding: 0 10rem;
+		}
 
-  .content-pick {
-    padding-top: 30px;
-    border-top: 2px dashed @navigation-border;
-    display: flex;
-    justify-content: space-between;
+		margin: 0 auto 30px;
 
-    .destination {
-      width: 30%;
-      margin-bottom: 30px;
-    }
-  }
-}// home
+		img {
+			border-radius: 10px;
+			width: 100%;
+		}
+	}
+
+	.content-pick {
+		.side-padding;
+
+		display: flex;
+		flex-direction: column;
+		@media @desktop {
+			flex-direction: unset;
+		}
+
+		.destination {
+			margin-bottom: 30px;
+			padding: 0 5rem;
+			padding-top: 30px;
+			border-top: 2px dashed #c0c0c0;
+
+			> .btn {
+				.bubble-butt(#17a1b8, white);
+			}
+		}
+	}
+} // home

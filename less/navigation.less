@@ -1,1 +1,29 @@
 // Navigation Styles here
+.header-section {
+	.m-flex(center, center, wrap);
+
+	text-align: center;
+	border-bottom: 2px dashed #c0c0c0;
+	padding-bottom: 1rem;
+	@media @desktop {
+		padding-bottom: 2rem;
+	}
+
+	> .header-title {
+		font-size: 3rem;
+		margin-bottom: 2rem;
+		width: 100%;
+		@media @desktop {
+			margin-bottom: unset;
+			width: unset;
+		}
+	}
+
+	> .header-nav {
+		width: 80%;
+		.m-flex(space-between);
+		@media @desktop {
+			justify-content: flex-end;
+		}
+	}
+}
