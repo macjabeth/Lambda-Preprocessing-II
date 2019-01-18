@@ -10,3 +10,16 @@
 .side-padding() {
 	padding: 0 2rem;
 }
+
+.bubble-butt(@bg, @col) {
+	background-color: @bg;
+	padding: 1.5rem;
+	border-radius: 1.5rem;
+	color: @col;
+	text-align: center;
+	font-size: 1.8rem;
+	font-weight: bold;
+	@media @desktop {
+		padding: 1rem 1.5rem;
+	}
+}
